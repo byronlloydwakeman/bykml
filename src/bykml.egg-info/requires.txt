@@ -1,0 +1,4 @@
+xmltodict
+
+[dev]
+bumpver

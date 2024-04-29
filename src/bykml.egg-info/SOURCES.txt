@@ -1,0 +1,14 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+src/bykml/__init__.py
+src/bykml/__main__.py
+src/bykml/config.toml
+src/bykml/kmlfactory.py
+src/bykml.egg-info/PKG-INFO
+src/bykml.egg-info/SOURCES.txt
+src/bykml.egg-info/dependency_links.txt
+src/bykml.egg-info/entry_points.txt
+src/bykml.egg-info/requires.txt
+src/bykml.egg-info/top_level.txt
