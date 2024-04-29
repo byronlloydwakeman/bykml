@@ -24,6 +24,12 @@ we cannot have a nested folder with multiple placemarks inside.
 This is currently being reviewed for a solution.</p>
 
 <h2>Changelog</h2>
+<h3>1.5.0 (29/04/2024)</h3>
+<ul>
+    <li>Updated placemark template to accept images</li>
+    <li>Updated function comments</li>
+</ul>
+
 <h3>1.4.0 (22/01/2024)</h3>
 <ul>
     <li>Added kmlfactory</li>
