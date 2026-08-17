@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bykml"
-version = "1.5.0"
+version = "1.6.0"
 description = "the bykml library"
 readme = "README.md"
 authors = [{ name = "Byron - Lloyd Wakeman", email = "lloydwakemanbyron@gmail.com" }]
