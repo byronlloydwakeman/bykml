@@ -1,8 +1,15 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: bykml
 Version: 1.5.0
 Summary: the bykml library
 Author-email: Byron - Lloyd Wakeman <lloydwakemanbyron@gmail.com>
+License: Copyright © 2024 bykml
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Keywords: feed,bykml,tutorial
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
@@ -12,56 +19,41 @@ Description-Content-Type: text/markdown
 License-File: LICENCE
 Requires-Dist: xmltodict
 Provides-Extra: dev
-Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: python-semantic-release; extra == "dev"
+Dynamic: license-file
 
-<h2>Introduction</h2>
+## Introduction
 
-<p>bykml is a library to easily read, write and update KML files. 
-It's built around using dictionaries to easily replace values and add kml elements.</p>
+**bykml** is a library for reading, writing, and updating KML files.
+It uses dictionaries to make replacing values and adding KML elements simple.
 
-<h2>Documentation</h2>
-<p>kmlfactory file inside the bykml package has a KmlFactory class and a placemark_template function 
-used to create placemarks and add to the 
-</p>
+## Documentation
 
-<h2>Install</h2>
-<p>You can install the package with ```pip install bykml```</p>
+The `kmlfactory` module inside the `bykml` package provides:
 
-<h2>Dependencies</h2>
-<ul>
-    <li><a href="https://pypi.org/project/xmltodict/">xmltodict</a></li>
-</ul>
+- `KmlFactory` class
+- `placemark_template` function
 
-<h2>Limitations</h2>
-<p>Due to the nature of dictionaries of only being able to have one key per value.
-This subsequently means that lists have to be used to have multiple items within the same kml tag.
-For example if we have a 'Folder' tag which will contain a number of placemarks, 
-we cannot have a nested folder with multiple placemarks inside.
-This is currently being reviewed for a solution.</p>
+These are used to create placemarks and add them to a KML structure.
 
-<h2>Changelog</h2>
-<h3>1.5.0 (29/04/2024)</h3>
-<ul>
-    <li>Updated placemark template to accept images</li>
-    <li>Updated function comments</li>
-</ul>
+## Install
 
-<h3>1.4.0 (22/01/2024)</h3>
-<ul>
-    <li>Added kmlfactory</li>
-</ul>
+```bash
+pip install bykml
+```
 
-<h3>1.3.0 (22/01/2024)</h3>
-<ul>
-    <li>Updated README</li>
-</ul>
+## Dependencies
 
-<h3>1.2.0 (22/01/2024)</h3>
-<ul>
-    <li>Updated maintainers</li>
-</ul>
+- [xmltodict](https://pypi.org/project/xmltodict/)
 
-<h3>1.1.0 (21/01/2024)</h3>
-<ul>
-    <li>Initial release</li>
-</ul>
+## Limitations
+
+Because Python dictionaries can only hold one value per key, lists must be used when a KML tag needs multiple child items.
+
+For example, a `Folder` containing multiple placemarks must represent those placemarks as a list.
+Support for more flexible nested structures is currently under review.
+
+For release history, see [CHANGELOG.md](./CHANGELOG.md).

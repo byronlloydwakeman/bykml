@@ -1,4 +1,7 @@
 xmltodict
 
 [dev]
-bumpver
+build
+pytest
+ruff
+python-semantic-release
