@@ -23,29 +23,12 @@ For example if we have a 'Folder' tag which will contain a number of placemarks,
 we cannot have a nested folder with multiple placemarks inside.
 This is currently being reviewed for a solution.</p>
 
-<h2>Changelog</h2>
-<h3>1.5.0 (29/04/2024)</h3>
+<h2>Automated releases</h2>
+<p>This repository uses <strong>Conventional Commits</strong> and <strong>python-semantic-release</strong> for automated versioning and changelog generation.</p>
 <ul>
-    <li>Updated placemark template to accept images</li>
-    <li>Updated function comments</li>
+    <li><code>fix:</code> commits trigger a patch release</li>
+    <li><code>feat:</code> commits trigger a minor release</li>
+    <li><code>feat!:</code> or <code>BREAKING CHANGE:</code> trigger a major release</li>
 </ul>
-
-<h3>1.4.0 (22/01/2024)</h3>
-<ul>
-    <li>Added kmlfactory</li>
-</ul>
-
-<h3>1.3.0 (22/01/2024)</h3>
-<ul>
-    <li>Updated README</li>
-</ul>
-
-<h3>1.2.0 (22/01/2024)</h3>
-<ul>
-    <li>Updated maintainers</li>
-</ul>
-
-<h3>1.1.0 (21/01/2024)</h3>
-<ul>
-    <li>Initial release</li>
-</ul>
+<p>On pushes to <code>main</code>, GitHub Actions runs CI, computes the next semantic version, updates <code>CHANGELOG.md</code>, tags the release, builds distributions, and publishes to PyPI using trusted publishing (OIDC).</p>
+<p>For release history, see <a href="./CHANGELOG.md">CHANGELOG.md</a>.</p>
