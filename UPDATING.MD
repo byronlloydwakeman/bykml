@@ -10,7 +10,7 @@ On pushes to `main`, GitHub Actions runs CI, computes the next semantic version,
 
 <h2>Update the Package</h2>
 Update the package version using bumpver (in the root dir) <br/>
-```bumpver update --minor```
+`bumpver update --minor`
 <br/>
 
 <h2>Build the new package</h2>
