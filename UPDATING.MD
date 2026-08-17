@@ -1,3 +1,13 @@
+## Automated releases
+
+This repository uses **Conventional Commits** and **python-semantic-release** for automated versioning and changelog generation.
+
+- `fix:` commits trigger a patch release
+- `feat:` commits trigger a minor release
+- `feat!:` or `BREAKING CHANGE:` trigger a major release
+
+On pushes to `main`, GitHub Actions runs CI, computes the next semantic version, updates `CHANGELOG.md`, tags the release, builds distributions, and publishes to PyPI.
+
 <h2>Update the Package</h2>
 Update the package version using bumpver (in the root dir) <br/>
 ```bumpver update --minor```
