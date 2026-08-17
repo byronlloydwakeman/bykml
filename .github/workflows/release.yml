@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
@@ -37,7 +37,7 @@ jobs:
 
   release:
     name: Semantic Release and Publish
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: ci
     runs-on: ubuntu-latest
     environment:
