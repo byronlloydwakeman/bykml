@@ -12,3 +12,4 @@ src/bykml.egg-info/dependency_links.txt
 src/bykml.egg-info/entry_points.txt
 src/bykml.egg-info/requires.txt
 src/bykml.egg-info/top_level.txt
+tests/test_version.py

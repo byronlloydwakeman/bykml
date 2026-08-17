@@ -43,8 +43,8 @@ build_command = "python -m build"
 version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/bykml/__init__.py:__version__"]
 
-[tool.semantic_release.branches.main]
-match = "main"
+[tool.semantic_release.branches.master]
+match = "master"
 prerelease = false
 
 #[tool.bumpver]
